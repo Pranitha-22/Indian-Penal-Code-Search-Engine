@@ -1,0 +1,303 @@
+/* ==================================
+   GLOBAL
+================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #202124;
+}
+
+/* ==================================
+   TOP BAR
+================================== */
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 56px;
+  width: 100%;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  background: #ffffff;
+  z-index: 1000;
+}
+
+.top-bar a {
+  text-decoration: none;
+  color: #5f6368;
+}
+
+.top-bar a:hover {
+  color: #1a73e8;
+}
+
+/* ==================================
+   LAYOUT
+================================== */
+
+#app {
+  padding-top: 56px;
+}
+
+#app.home #main {
+  margin-top: 18vh;
+  text-align: center;
+}
+
+/* ==================================
+   HERO SECTION
+================================== */
+
+.hero {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a73e8;
+  margin: 12px 0 8px;
+}
+
+.hero-sub {
+  font-size: 16px;
+  color: #5f6368;
+  margin-bottom: 32px;
+}
+
+/* ==================================
+   SEARCH BAR (TRICOLOR BORDER)
+================================== */
+
+.search-box {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 16px 60px 16px 24px;
+  font-size: 16px;
+  border-radius: 40px;
+  border: 2px solid transparent;
+  outline: none;
+
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(
+      90deg,
+      #ff9933,
+      #ffffff,
+      #138808,
+      #ff9933
+    ) border-box;
+
+  background-size: 300% 100%;
+  animation: borderFlow 6s linear infinite;
+
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+@keyframes borderFlow {
+  from { background-position: 0% 50%; }
+  to   { background-position: 100% 50%; }
+}
+
+.search-box button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: #1a73e8;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(26,115,232,0.35);
+  transition: 0.2s ease;
+}
+
+.search-box button:hover {
+  background: #1558c0;
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* ==================================
+   POPULAR CATEGORIES
+================================== */
+
+.popular {
+  margin-top: 48px;
+}
+
+.popular h4 {
+  font-size: 12px;
+  letter-spacing: 1.6px;
+  color: #5f6368;
+  margin-bottom: 18px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.categories button {
+  padding: 10px 20px;
+  border-radius: 24px;
+  border: 1px solid #dadce0;
+  background: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.categories button:hover {
+  background: #f8f9fa;
+  border-color: #1a73e8;
+}
+
+/* ==================================
+   AUTOCOMPLETE
+================================== */
+
+.suggestions {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  display: none;
+  text-align: left;
+  z-index: 1200;
+}
+
+.suggestion {
+  padding: 12px 18px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.suggestion:hover,
+.suggestion.active {
+  background: #f1f3f4;
+}
+
+/* ==================================
+   SEARCH RESULTS
+================================== */
+
+#results {
+  max-width: 720px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+.result {
+  margin-bottom: 26px;
+  padding: 18px;
+  border-radius: 14px;
+  transition: 0.2s ease;
+}
+
+.result:hover {
+  background: #f8f9ff;
+  transform: translateY(-3px);
+}
+
+.title {
+  font-size: 18px;
+  color: #1a0dab;
+  cursor: pointer;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+.url {
+  font-size: 13px;
+  color: #006621;
+  margin-bottom: 4px;
+}
+
+.snippet {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ==================================
+   SECTION PAGE
+================================== */
+
+.detail {
+  max-width: 900px;
+  margin: 96px auto;
+  padding: 0 24px 80px;
+}
+
+.detail h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.detail h3 {
+  font-size: 15px;
+  color: #5f6368;
+  font-weight: normal;
+}
+
+.law-text {
+  font-size: 16.5px;
+  line-height: 1.85;
+  text-align: justify;
+  margin-top: 20px;
+}
+
+.illustration-block {
+  margin-top: 40px;
+  background: #f1f8f4;
+  border-left: 4px solid #138808;
+  padding: 18px;
+  border-radius: 6px;
+}
+
+.punishment-block {
+  margin-top: 30px;
+  background: #fdf3f3;
+  border-left: 4px solid #d93025;
+  padding: 18px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.back {
+  color: #1a73e8;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+}
