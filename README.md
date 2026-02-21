@@ -1,89 +1,99 @@
-# NLP-Driven Indian Penal Code Search Engine
+# ⚖️ NLP-Driven Indian Penal Code Search Engine
+## 📘 Legal Information Retrieval System Built from Raw IPC PDF
 
-## Legal Information Retrieval System using NLP
+This project converts the Indian Penal Code (IPC) from raw PDF format into a structured dataset and builds a searchable web-based legal information retrieval system.
 
-This project is a semantic search engine for navigating the Indian Penal Code (IPC).  
-It enables intelligent retrieval of sections, punishments, and related offenses using NLP-based similarity ranking instead of simple keyword matching.
-
----
-
-## Core Features
-
-- Structured IPC dataset parsing
-- Section-level indexing (main text, proviso, explanation, punishment)
-- Keyword + similarity-based search
-- FastAPI backend API
-- Clean web interface
-- Popular category filtering
-- Ranked search results
-- Optimized query response time
+The system enables users to search IPC sections, punishments, and offenses through a clean UI powered by a backend NLP pipeline.
 
 ---
 
-## System Architecture
+## 🧠 Project Pipeline
+
+IPC PDF  
+→ Text Extraction  
+→ Section Parsing & Structuring  
+→ Dataset Creation (CSV)  
+→ Search Engine Backend  
+→ Web UI Rendering  
+
+---
+
+## 📂 Data Engineering
+
+- Extracted raw IPC content from PDF
+- Cleaned and structured into section-level dataset
+- Separated components:
+  - Main Text  
+  - Proviso  
+  - Explanation  
+  - Punishment  
+  - Chapter  
+- Generated searchable CSV dataset
+
+This transforms unstructured legal text into structured machine-readable data.
+
+---
+
+## 🔍 Core Features
+
+- Structured IPC dataset from PDF source  
+- Section-based indexing  
+- Keyword-driven search  
+- Ranked section retrieval  
+- Clean, responsive UI  
+- Popular legal category shortcuts  
+- Fast query response  
+
+---
+
+## ⚙️ Search Engine Workflow
 
 User Query  
 → Text Preprocessing  
-→ Vectorization (TF-IDF / Embeddings)  
-→ Similarity Scoring  
-→ Ranked Section Retrieval  
-→ API Response  
-→ Frontend Rendering  
+→ Dataset Search  
+→ Section Matching  
+→ Ranked Results  
+→ Frontend Display  
 
 ---
 
-## NLP Pipeline
+## 🖥️ User Interface
 
-- Text cleaning & normalization
-- Tokenization
-- TF-IDF vectorization
-- Cosine similarity ranking
-- Relevance-based result sorting
-
-(Optional: if you used Sentence Transformers, mention it clearly.)
+- Minimal legal search layout  
+- Prominent search bar  
+- Category-based navigation  
+- Section result formatting  
+- Clear punishment display  
 
 ---
 
-## Example Query
+## 🛠️ Technology Stack
 
-Input:
-"What is punishment for kidnapping?"
+### 🐍 Backend
+- Python  
+- FastAPI  
+- Pandas  
 
-Output:
-- IPC Section 359–369
-- Relevant punishment clauses
-- Ranked related sections
+### 📊 Data Processing
+- Custom PDF-to-dataset parser  
+- CSV-based indexing  
 
----
-
-## Technology Stack
-
-### Backend
-- Python
-- FastAPI
-- Pandas
-- Scikit-learn
-
-### NLP
-- TF-IDF Vectorizer
-- Cosine Similarity
-
-### Frontend
-- HTML
-- CSS
-- JavaScript
+### 🌐 Frontend
+- HTML  
+- CSS  
+- JavaScript  
 
 ---
 
-## Dataset
+## 📁 Dataset
 
-- Structured IPC CSV dataset
-- Cleaned and tokenized for NLP processing
-- Indexed by section number and category
+- Source: Indian Penal Code (official PDF)
+- Converted into structured CSV format
+- Indexed by section number and legal category
 
 ---
 
-## Run Locally
+## ▶️ Run Locally
 
 ```bash
 pip install -r backend/requirements.txt
@@ -98,19 +108,19 @@ http://127.0.0.1:8000
 
 ---
 
-## Engineering Highlights
+## 🚀 Engineering Highlights
 
-- Designed legal text indexing pipeline
-- Implemented similarity-based ranking mechanism
-- Built API-based search architecture
-- Optimized dataset cleaning and preprocessing
-- Clean separation of backend and static assets
+- Built automated PDF-to-dataset conversion pipeline  
+- Designed legal document structuring logic  
+- Implemented searchable backend architecture  
+- Built full-stack legal search interface  
+- Clean separation of data processing and UI layers  
 
 ---
 
-## Future Improvements
+## 🔮 Future Improvements
 
-- Upgrade to transformer embeddings
-- Add multilingual search
-- Deploy as public legal search API
-- Implement advanced query expansion
+- Add TF-IDF ranking  
+- Upgrade to embedding-based semantic search  
+- Add multilingual query support  
+- Deploy as public legal API  
