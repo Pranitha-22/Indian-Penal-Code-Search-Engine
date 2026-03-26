@@ -44,7 +44,7 @@ EXPOSE 8000
 # ===============================
 # Health Check (VERY IMPORTANT)
 # ===============================
-HEALTHCHECK CMD curl --fail http://localhost:8000 || exit 1
+HEALTHCHECK CMD curl --fail http://localhost:8000 || exit 1.
 
 # ===============================
 # Run App
