@@ -1,95 +1,84 @@
-# ⚖️ NLP-Driven Indian Penal Code Search Engine
-## 📘 Legal Information Retrieval System Built from Raw IPC PDF
+# ⚖️ AI-Powered Indian Penal Code Legal Assistant
 
-This project converts the Indian Penal Code (IPC) from raw PDF format into a structured dataset and builds a searchable web-based legal information retrieval system.
-
-The system enables users to search IPC sections, punishments, and offenses through a clean UI powered by a backend NLP pipeline.
+An intelligent legal search and reasoning system built from raw IPC data using NLP and hybrid AI retrieval techniques.
 
 ---
 
-## 🧠 Project Pipeline
+## 🧠 Key Highlights
 
-IPC PDF  
-→ Text Extraction  
-→ Section Parsing & Structuring  
-→ Dataset Creation (CSV)  
-→ Search Engine Backend  
-→ Web UI Rendering  
-
----
-
-## 📂 Data Engineering
-
-- Extracted raw IPC content from PDF
-- Cleaned and structured into section-level dataset
-- Separated components:
-  - Main Text  
-  - Proviso  
-  - Explanation  
-  - Punishment  
-  - Chapter  
-- Generated searchable CSV dataset
-
-This transforms unstructured legal text into structured machine-readable data.
+- 🔍 Hybrid Search Engine (BM25 + Semantic Embeddings)
+- 🤖 AI-Powered Legal Answer Generation
+- 📊 Structured IPC dataset built from raw PDF
+- ⚡ Real-time FastAPI backend with optimized retrieval
+- 🧠 Explainable AI with reasoning and keyword matching
+- 🌐 Clean UI for legal query interaction
 
 ---
 
-## 🔍 Core Features
+## 🚀 What Makes This Project Unique
 
-- Structured IPC dataset from PDF source  
-- Section-based indexing  
-- Keyword-driven search  
-- Ranked section retrieval  
-- Clean, responsive UI  
-- Popular legal category shortcuts  
-- Fast query response  
+Unlike traditional keyword-based systems, this project:
+
+- Understands **natural language queries**
+- Performs **semantic search using transformers**
+- Provides **context-aware legal explanations**
+- Includes **reasoning behind results (Explainable AI)**
 
 ---
 
-## ⚙️ Search Engine Workflow
+## 🧠 System Architecture
 
 User Query  
-→ Text Preprocessing  
-→ Dataset Search  
-→ Section Matching  
-→ Ranked Results  
+→ Query Normalization  
+→ Hybrid Retrieval (BM25 + Embeddings)  
+→ Section Ranking  
+→ AI Answer Generation  
+→ Explanation + Reasoning  
 → Frontend Display  
 
 ---
 
-## 🖥️ User Interface
+## 📊 Core Features
 
-- Minimal legal search layout  
-- Prominent search bar  
-- Category-based navigation  
-- Section result formatting  
-- Clear punishment display  
+- Section-based legal search  
+- IPC punishment extraction  
+- Bail / Cognizable classification  
+- Related sections recommendation  
+- Intelligent query understanding  
+- Explainable AI outputs  
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠 Tech Stack
 
-### 🐍 Backend
-- Python  
+### Backend
 - FastAPI  
+- Python  
+
+### NLP & AI
+- Sentence Transformers  
+- BM25  
+- Scikit-learn  
+- FAISS  
+
+### Data Processing
 - Pandas  
+- Numpy  
 
-### 📊 Data Processing
-- Custom PDF-to-dataset parser  
-- CSV-based indexing  
-
-### 🌐 Frontend
-- HTML  
-- CSS  
-- JavaScript  
+### Frontend
+- HTML, CSS, JavaScript  
 
 ---
 
 ## 📁 Dataset
 
-- Source: Indian Penal Code (official PDF)
-- Converted into structured CSV format
-- Indexed by section number and legal category
+- Source: Indian Penal Code PDF  
+- Converted into structured dataset with:
+  - Section  
+  - Title  
+  - Law Text  
+  - Punishment  
+  - Keywords  
 
 ---
 
@@ -98,29 +87,3 @@ User Query
 ```bash
 pip install -r backend/requirements.txt
 uvicorn backend.app:app --reload
-```
-
-Open in browser:
-
-```
-http://127.0.0.1:8000
-```
-
----
-
-## 🚀 Engineering Highlights
-
-- Built automated PDF-to-dataset conversion pipeline  
-- Designed legal document structuring logic  
-- Implemented searchable backend architecture  
-- Built full-stack legal search interface  
-- Clean separation of data processing and UI layers  
-
----
-
-## 🔮 Future Improvements
-
-- Add TF-IDF ranking  
-- Upgrade to embedding-based semantic search  
-- Add multilingual query support  
-- Deploy as public legal API  
