@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pandas
+numpy
+rank-bm25
+python-dotenv
+requests
+scikit-learn
+sentence-transformers
+torch
+faiss-cpu
+openai
+nltk
